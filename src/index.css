@@ -1,0 +1,45 @@
+@import "tailwindcss";
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global body style for light theme */
+body {
+  @apply bg-gradient-to-br from-white to-slate-100 text-gray-800 min-h-screen;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glassmorphic card style */
+.glass {
+  background: rgba(255, 255, 255, 0.99);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Neon hover glow */
+.glass:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), 0 0 45px rgba(0, 255, 255, 0.4);
+  transform: translateY(-4px);
+}
+/* Glassmorphic card style with neon glow on hover */
+.card {
+  background: rgba(255, 255, 255, 0.99);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Neon hover glow */
+.card:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6), 0 0 45px rgba(255, 0, 0, 0.4);
+  transform: translateY(-4px); /* Adds subtle lifting effect */
+}
